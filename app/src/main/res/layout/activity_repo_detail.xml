@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorWhite"
+    tools:context=".RepoDetailActivity">
+
+    <ImageView
+        android:id="@+id/profilePic"
+        android:src="@color/colorAccent"
+        android:layout_width="120dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"
+        android:layout_marginRight="10dp"
+        android:layout_height="120dp" />
+
+
+    <TextView
+        android:layout_below="@id/profilePic"
+        android:layout_marginTop="5dp"
+        android:id="@+id/repoTitle"
+        android:layout_centerHorizontal="true"
+        android:textSize="@dimen/repo_title_list_size"
+        android:textColor="@color/colorBlack"
+        android:text="Title"
+        android:layout_width="wrap_content"
+        android:textStyle="bold"
+        android:layout_height="wrap_content" />
+
+    <TextView
+        android:layout_below="@+id/repoTitle"
+        android:id="@+id/repoDescription"
+        android:text="Description"
+        android:layout_marginBottom="8dp"
+        android:layout_centerHorizontal="true"
+        android:textSize="@dimen/repo_description_text_size"
+        android:layout_width="wrap_content"
+        android:gravity="center_horizontal"
+        android:textStyle="normal"
+        android:layout_height="wrap_content" />
+
+
+    <LinearLayout
+            android:id="@+id/layoutFirstStats"
+            android:layout_marginTop="16dp"
+            android:layout_below="@+id/repoDescription"
+            android:layout_width="match_parent"
+            android:orientation="horizontal"
+            android:background="@color/colorLightGrey"
+            android:layout_height="50dp">
+
+        <TextView
+                android:id="@+id/repoWatchers"
+                android:layout_width="0dp"
+                android:layout_marginBottom="1dp"
+                android:background="@color/colorWhite"
+                android:layout_weight="1"
+                android:layout_marginTop="1dp"
+                android:paddingTop="4dp"
+                android:textColor="@color/colorBlack"
+                android:drawableTop="@drawable/ic_eye"
+                android:gravity="center_horizontal"
+                android:layout_height="match_parent"
+        />
+        <TextView
+                android:id="@+id/repoStars"
+                android:layout_width="0dp"
+                android:layout_marginLeft="1dp"
+                android:textColor="@color/colorBlack"
+                android:layout_marginRight="1dp"
+                android:layout_marginTop="1dp"
+                android:paddingTop="4dp"
+                android:background="@color/colorWhite"
+                android:drawableTop="@drawable/ic_star"
+                android:gravity="center_horizontal"
+                android:layout_weight="1"
+                android:layout_marginBottom="1dp"
+                android:layout_height="match_parent"
+        />
+
+        <TextView
+                android:id="@+id/repoForks"
+                android:layout_width="0dp"
+                android:textColor="@color/colorBlack"
+                android:layout_weight="1"
+                android:layout_marginTop="1dp"
+                android:layout_marginRight="1dp"
+                android:paddingTop="4dp"
+                android:drawableTop="@drawable/ic_repo_forked_big"
+                android:layout_marginBottom="1dp"
+                android:gravity="center_horizontal"
+                android:background="@color/colorWhite"
+                android:layout_height="match_parent"
+        />
+
+        <TextView
+                android:id="@+id/repoOpenIssues"
+                android:layout_width="0dp"
+                android:background="@color/colorWhite"
+                android:layout_weight="1"
+                android:layout_marginTop="1dp"
+                android:layout_marginRight="1dp"
+                android:layout_marginBottom="1dp"
+                android:paddingTop="4dp"
+                android:textColor="@color/colorBlack"
+                android:drawableTop="@drawable/ic_issue_opened"
+                android:gravity="center_horizontal"
+                android:layout_height="match_parent"
+        />
+
+
+        <TextView
+                android:id="@+id/repoLanguage"
+                android:layout_width="0dp"
+                android:textColor="@color/colorBlack"
+                android:layout_weight="1"
+                android:layout_marginTop="1dp"
+                android:paddingTop="4dp"
+                android:drawableTop="@drawable/ic_earth"
+                android:layout_marginBottom="1dp"
+                android:gravity="center_horizontal"
+                android:background="@color/colorWhite"
+                android:layout_height="match_parent"
+        />
+    </LinearLayout>
+    <TextView
+            android:layout_below="@+id/layoutFirstStats"
+            android:id="@+id/repoFullDescription"
+            android:text="Description"
+            android:layout_marginTop="8dp"
+            android:layout_marginRight="40dp"
+            android:layout_marginLeft="40dp"
+            android:layout_centerHorizontal="true"
+            android:textSize="@dimen/repo_description_text_size"
+            android:layout_width="match_parent"
+            android:gravity="center_horizontal"
+            android:textStyle="normal"
+            android:layout_height="wrap_content" />
+
+    <ImageButton
+        android:id="@+id/buttonGoGitHub"
+        android:text="View on Github"
+        android:layout_marginRight="16dp"
+        android:layout_marginLeft="16dp"
+        android:textAllCaps="false"
+        android:onClick="btnOnGithubClicked"
+        android:textColor="@color/colorWhite"
+        android:textSize="@dimen/button_text_size"
+        android:layout_width="50dp"
+        android:layout_marginBottom="15dp"
+        android:layout_height="50dp"
+        android:src="@mipmap/ic_github"
+        android:background="@drawable/rounded_button"
+        android:layout_alignParentBottom="true"
+    android:layout_alignParentRight="true"/>
+</RelativeLayout>

@@ -25,3 +25,10 @@ allprojects {
 task clean(type: Delete) {
     delete rootProject.buildDir
 }
+
+
+ext{
+    retrofitVersion = '2.5.0'
+    converterGsonVersion = '2.3.0'
+    picassoVersion = '2.71828'
+}

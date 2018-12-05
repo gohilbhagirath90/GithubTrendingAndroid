@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:id="@+id/card_view"
+        android:layout_height="wrap_content">
+
+
+    <RelativeLayout
+            android:layout_below="@+id/label"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+        <ImageView
+                android:id="@+id/owner_avatar"
+                android:background="@color/colorAccent"
+                android:layout_width="50dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginLeft="16dp"
+                android:layout_marginRight="16dp"
+                android:layout_height="50dp"/>
+
+
+        <RelativeLayout
+                android:layout_toRightOf="@+id/owner_avatar"
+                android:layout_width="match_parent"
+                android:orientation="vertical"
+                android:layout_marginTop="16dp"
+                android:layout_marginRight="16dp"
+                android:layout_marginBottom="16dp"
+                android:layout_height="wrap_content">
+
+            <TextView
+                    android:id="@+id/repo_title"
+                    android:textSize="@dimen/repo_title_list_size"
+                    android:textColor="@color/colorBlack"
+                    android:text="Title"
+                    android:layout_width="wrap_content"
+                    android:textStyle="bold"
+                    android:layout_height="wrap_content"/>
+
+            <TextView
+                    android:layout_below="@+id/repo_title"
+                    android:id="@+id/repo_description"
+                    android:text="Description"
+                    android:textSize="@dimen/repo_description_text_size"
+                    android:layout_width="wrap_content"
+                    android:textStyle="normal"
+                    android:layout_height="wrap_content"/>
+
+            <LinearLayout
+                    android:layout_below="@+id/repo_description"
+                    android:id="@+id/stats_layout"
+                    android:layout_width="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_height="20dp">
+
+                <TextView
+                        android:id="@+id/repo_watchers"
+                        android:drawableLeft="@drawable/ic_repo_forked"
+                        android:text=" 1233"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"/>
+
+                <TextView
+                        android:id="@+id/repo_language"
+                        android:text="Java"
+                        android:layout_marginLeft="10dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"/>
+
+            </LinearLayout>
+
+        </RelativeLayout>
+
+
+    </RelativeLayout>
+
+</androidx.cardview.widget.CardView>
